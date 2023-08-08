@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/xincheng/Documents/GitHub/EHR%20record/mlruns/189104600968931494/7266691459ee468f883d7399e1669c5b/artifacts
+end_time: 1691520300316
+entry_point_name: ''
+experiment_id: '189104600968931494'
+lifecycle_stage: active
+run_id: 7266691459ee468f883d7399e1669c5b
+run_name: youthful-bass-470
+run_uuid: 7266691459ee468f883d7399e1669c5b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691520300301
+status: 3
+tags: []
+user_id: xincheng

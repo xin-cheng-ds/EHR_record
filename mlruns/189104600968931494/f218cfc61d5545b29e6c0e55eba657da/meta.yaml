@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/xincheng/Documents/GitHub/EHR%20record/mlruns/189104600968931494/f218cfc61d5545b29e6c0e55eba657da/artifacts
+end_time: 1691517265415
+entry_point_name: ''
+experiment_id: '189104600968931494'
+lifecycle_stage: active
+run_id: f218cfc61d5545b29e6c0e55eba657da
+run_name: gentle-loon-52
+run_uuid: f218cfc61d5545b29e6c0e55eba657da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691517265396
+status: 3
+tags: []
+user_id: xincheng

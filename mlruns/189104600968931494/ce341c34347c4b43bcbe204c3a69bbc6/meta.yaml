@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/xincheng/Documents/GitHub/EHR%20record/mlruns/189104600968931494/ce341c34347c4b43bcbe204c3a69bbc6/artifacts
+end_time: 1691516476656
+entry_point_name: ''
+experiment_id: '189104600968931494'
+lifecycle_stage: active
+run_id: ce341c34347c4b43bcbe204c3a69bbc6
+run_name: chill-carp-168
+run_uuid: ce341c34347c4b43bcbe204c3a69bbc6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691516476634
+status: 3
+tags: []
+user_id: xincheng

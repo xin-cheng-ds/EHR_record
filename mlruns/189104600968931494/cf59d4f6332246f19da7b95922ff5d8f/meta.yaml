@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/xincheng/Documents/GitHub/EHR%20record/mlruns/189104600968931494/cf59d4f6332246f19da7b95922ff5d8f/artifacts
+deleted_time: 1691515685217
+end_time: 1691515439329
+entry_point_name: ''
+experiment_id: '189104600968931494'
+lifecycle_stage: deleted
+run_id: cf59d4f6332246f19da7b95922ff5d8f
+run_name: exultant-kite-921
+run_uuid: cf59d4f6332246f19da7b95922ff5d8f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691515439315
+status: 3
+tags: []
+user_id: xincheng
