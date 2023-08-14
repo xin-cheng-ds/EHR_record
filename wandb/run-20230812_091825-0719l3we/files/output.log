@@ -1,0 +1,10 @@
+
+Training Random Forest with fraction 0.1
+An error occurred while fitting the model Random Forest: For multi-metric scoring, the parameter refit must be set to a scorer key or a callable to refit an estimator with the best parameter setting on the whole data and make the best_* attributes available for that metric. If this is not needed, refit should be set to False explicitly. 'f1' was passed.
+Skipping evaluation for Random Forest due to an error during fitting.
+Training Random Forest with fraction 0.2
+An error occurred while fitting the model Random Forest: For multi-metric scoring, the parameter refit must be set to a scorer key or a callable to refit an estimator with the best parameter setting on the whole data and make the best_* attributes available for that metric. If this is not needed, refit should be set to False explicitly. 'f1' was passed.
+Skipping evaluation for Random Forest due to an error during fitting.
+Training Random Forest with fraction 0.3
+An error occurred while fitting the model Random Forest: For multi-metric scoring, the parameter refit must be set to a scorer key or a callable to refit an estimator with the best parameter setting on the whole data and make the best_* attributes available for that metric. If this is not needed, refit should be set to False explicitly. 'f1' was passed.
+Skipping evaluation for Random Forest due to an error during fitting.

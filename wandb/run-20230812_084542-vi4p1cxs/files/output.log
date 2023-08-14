@@ -1,0 +1,4 @@
+
+Training Random Forest with fraction 0.1
+An error occurred while evaluating the model Random Forest: This GridSearchCV instance was initialized with `refit=False`. predict is available only after refitting on the best parameters. You can refit an estimator manually using the `best_params_` attribute
+Training Random Forest with fraction 0.2

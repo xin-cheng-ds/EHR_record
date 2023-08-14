@@ -1,0 +1,65 @@
+2023-08-11 18:44:39,392 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Current SDK version is 0.15.8
+2023-08-11 18:44:39,392 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Configure stats pid to 50013
+2023-08-11 18:44:39,392 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Loading settings from /Users/xincheng/.config/wandb/settings
+2023-08-11 18:44:39,392 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Loading settings from /Users/xincheng/Documents/GitHub/EHR record/wandb/settings
+2023-08-11 18:44:39,393 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-08-11 18:44:39,393 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-08-11 18:44:39,393 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-08-11 18:44:39,393 INFO    MainThread:50013 [wandb_init.py:_log_setup():507] Logging user logs to /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230811_184439-jcxgp6h5/logs/debug.log
+2023-08-11 18:44:39,393 INFO    MainThread:50013 [wandb_init.py:_log_setup():508] Logging internal logs to /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230811_184439-jcxgp6h5/logs/debug-internal.log
+2023-08-11 18:44:39,393 INFO    MainThread:50013 [wandb_init.py:_jupyter_setup():453] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x1445c3290>
+2023-08-11 18:44:39,393 INFO    MainThread:50013 [wandb_init.py:init():547] calling init triggers
+2023-08-11 18:44:39,393 INFO    MainThread:50013 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-08-11 18:44:39,394 INFO    MainThread:50013 [wandb_init.py:init():571] re-initializing run, found existing run on stack: kgi2bbxz
+2023-08-11 18:44:39,395 INFO    MainThread:50013 [wandb_run.py:_finish():1894] finishing run xin0558/EHR_record/kgi2bbxz
+2023-08-11 18:44:39,395 INFO    MainThread:50013 [wandb_run.py:_atexit_cleanup():2128] got exitcode: 0
+2023-08-11 18:44:39,396 INFO    MainThread:50013 [wandb_run.py:_restore():2111] restore
+2023-08-11 18:44:39,396 INFO    MainThread:50013 [wandb_run.py:_restore():2117] restore done
+2023-08-11 18:44:44,431 INFO    MainThread:50013 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2023-08-11 18:44:44,432 INFO    MainThread:50013 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2023-08-11 18:44:44,436 INFO    MainThread:50013 [wandb_run.py:_footer_sync_info():3440] logging synced files
+2023-08-11 18:44:44,507 INFO    MainThread:50013 [wandb_init.py:init():596] starting backend
+2023-08-11 18:44:44,507 INFO    MainThread:50013 [wandb_init.py:init():600] setting up manager
+2023-08-11 18:44:44,509 INFO    MainThread:50013 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2023-08-11 18:44:44,509 INFO    MainThread:50013 [wandb_init.py:init():606] backend started and connected
+2023-08-11 18:44:44,511 INFO    MainThread:50013 [wandb_run.py:_label_probe_notebook():1234] probe notebook
+2023-08-11 18:44:44,512 INFO    MainThread:50013 [wandb_init.py:init():697] updated telemetry
+2023-08-11 18:44:44,543 INFO    MainThread:50013 [wandb_init.py:init():730] communicating run to backend with 60.0 second timeout
+2023-08-11 18:44:45,710 INFO    MainThread:50013 [wandb_run.py:_on_init():2180] communicating current version
+2023-08-11 18:44:45,851 INFO    MainThread:50013 [wandb_run.py:_on_init():2189] got version response 
+2023-08-11 18:44:45,851 INFO    MainThread:50013 [wandb_init.py:init():781] starting run threads in backend
+2023-08-11 18:44:49,780 INFO    MainThread:50013 [wandb_run.py:_console_start():2159] atexit reg
+2023-08-11 18:44:49,780 INFO    MainThread:50013 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2023-08-11 18:44:49,780 INFO    MainThread:50013 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2023-08-11 18:44:49,781 INFO    MainThread:50013 [wandb_run.py:_redirect():2104] Redirects installed.
+2023-08-11 18:44:49,781 INFO    MainThread:50013 [wandb_init.py:init():822] run started, returning control to user process
+2023-08-11 22:29:18,689 INFO    MainThread:50013 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-08-11 22:29:18,690 INFO    MainThread:50013 [wandb_init.py:_pause_backend():418] pausing backend
+2023-08-11 22:31:34,034 INFO    MainThread:50013 [wandb_init.py:_resume_backend():423] resuming backend
+2023-08-11 22:31:34,051 INFO    MainThread:50013 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-08-11 22:31:34,051 INFO    MainThread:50013 [wandb_init.py:_pause_backend():418] pausing backend
+2023-08-11 22:31:54,531 INFO    MainThread:50013 [wandb_init.py:_resume_backend():423] resuming backend
+2023-08-11 22:31:54,546 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Current SDK version is 0.15.8
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Configure stats pid to 50013
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Loading settings from /Users/xincheng/.config/wandb/settings
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Loading settings from /Users/xincheng/Documents/GitHub/EHR record/wandb/settings
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_init.py:_log_setup():507] Logging user logs to /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230811_223154-tgeol342/logs/debug.log
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_init.py:_log_setup():508] Logging internal logs to /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230811_223154-tgeol342/logs/debug-internal.log
+2023-08-11 22:31:54,547 INFO    MainThread:50013 [wandb_init.py:init():547] calling init triggers
+2023-08-11 22:31:54,548 INFO    MainThread:50013 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-08-11 22:31:54,548 INFO    MainThread:50013 [wandb_init.py:init():571] re-initializing run, found existing run on stack: jcxgp6h5
+2023-08-11 22:31:54,551 INFO    MainThread:50013 [wandb_run.py:_finish():1894] finishing run xin0558/EHR_record/jcxgp6h5
+2023-08-11 22:31:54,551 INFO    MainThread:50013 [jupyter.py:save_history():445] not saving jupyter history
+2023-08-11 22:31:54,551 INFO    MainThread:50013 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-08-11 22:31:54,551 INFO    MainThread:50013 [wandb_init.py:_jupyter_teardown():435] cleaning up jupyter logic
+2023-08-11 22:31:54,552 INFO    MainThread:50013 [wandb_run.py:_atexit_cleanup():2128] got exitcode: 0
+2023-08-11 22:31:54,552 INFO    MainThread:50013 [wandb_run.py:_restore():2111] restore
+2023-08-11 22:31:54,552 INFO    MainThread:50013 [wandb_run.py:_restore():2117] restore done
+2023-08-11 22:32:00,429 INFO    MainThread:50013 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2023-08-11 22:32:00,447 INFO    MainThread:50013 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2023-08-11 22:32:00,455 INFO    MainThread:50013 [wandb_run.py:_footer_sync_info():3440] logging synced files
