@@ -30,7 +30,7 @@ executing==0.8.3
 fastjsonschema==2.16.2
 fonttools==4.25.0
 gitdb==4.0.10
-gitpython==3.1.32
+gitpython==3.1.35
 idna==3.4
 ipykernel==6.25.0
 ipython-genutils==0.2.0
