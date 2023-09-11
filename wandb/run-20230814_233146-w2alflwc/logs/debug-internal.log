@@ -1,0 +1,233 @@
+2023-08-14 23:31:54,968 INFO    StreamThr :87947 [internal.py:wandb_internal():86] W&B internal server running at pid: 87947, started at: 2023-08-14 23:31:54.967801
+2023-08-14 23:31:54,969 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status
+2023-08-14 23:31:54,969 INFO    WriterThread:87947 [datastore.py:open_for_write():85] open: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/run-w2alflwc.wandb
+2023-08-14 23:31:54,970 DEBUG   SenderThread:87947 [sender.py:send():379] send: header
+2023-08-14 23:31:54,970 DEBUG   SenderThread:87947 [sender.py:send():379] send: run
+2023-08-14 23:31:55,376 INFO    SenderThread:87947 [dir_watcher.py:__init__():211] watching files in: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files
+2023-08-14 23:31:55,376 INFO    SenderThread:87947 [sender.py:_start_run_threads():1121] run started: w2alflwc with start time 1692070314.107684
+2023-08-14 23:31:55,380 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: summary_record
+2023-08-14 23:31:55,380 INFO    SenderThread:87947 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-14 23:31:55,386 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: check_version
+2023-08-14 23:31:55,386 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: check_version
+2023-08-14 23:31:55,962 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: run_start
+2023-08-14 23:31:55,963 DEBUG   HandlerThread:87947 [system_info.py:__init__():31] System info init
+2023-08-14 23:31:55,963 DEBUG   HandlerThread:87947 [system_info.py:__init__():46] System info init done
+2023-08-14 23:31:55,963 INFO    HandlerThread:87947 [system_monitor.py:start():181] Starting system monitor
+2023-08-14 23:31:55,963 INFO    SystemMonitor:87947 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-08-14 23:31:55,964 INFO    HandlerThread:87947 [system_monitor.py:probe():201] Collecting system info
+2023-08-14 23:31:55,964 DEBUG   HandlerThread:87947 [system_info.py:probe():195] Probing system
+2023-08-14 23:31:55,964 INFO    SystemMonitor:87947 [interfaces.py:start():190] Started cpu monitoring
+2023-08-14 23:31:55,964 INFO    SystemMonitor:87947 [interfaces.py:start():190] Started disk monitoring
+2023-08-14 23:31:55,965 INFO    SystemMonitor:87947 [interfaces.py:start():190] Started memory monitoring
+2023-08-14 23:31:55,966 INFO    SystemMonitor:87947 [interfaces.py:start():190] Started network monitoring
+2023-08-14 23:31:55,967 DEBUG   HandlerThread:87947 [system_info.py:_probe_git():180] Probing git
+2023-08-14 23:31:55,988 DEBUG   HandlerThread:87947 [system_info.py:_probe_git():188] Probing git done
+2023-08-14 23:31:55,988 DEBUG   HandlerThread:87947 [system_info.py:probe():240] Probing system done
+2023-08-14 23:31:55,988 DEBUG   HandlerThread:87947 [system_monitor.py:probe():210] {'os': 'macOS-13.4.1-x86_64-i386-64bit', 'python': '3.11.4', 'heartbeatAt': '2023-08-15T03:31:55.964557', 'startedAt': '2023-08-15T03:31:46.507914', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'EHR_smote_version.ipynb', 'root': '/Users/xincheng/Documents/GitHub/EHR record', 'git': {'remote': 'https://github.com/xin-cheng-ds/EHR_record.git', 'commit': '1df5d1e824a98af4550b4fc20132a686fde471fc'}, 'email': 'xin0558@gmail.com', 'host': 'Xins-iMac.local', 'username': 'xincheng', 'executable': '/Users/xincheng/miniconda3/envs/data/bin/python', 'cpu_count': 4, 'cpu_count_logical': 4, 'cpu_freq': {'current': 3500, 'min': 3500, 'max': 3500}, 'cpu_freq_per_core': [{'current': 3500, 'min': 3500, 'max': 3500}], 'disk': {'total': 797.2127151489258, 'used': 748.1938552856445}, 'memory': {'total': 40.0}}
+2023-08-14 23:31:55,988 INFO    HandlerThread:87947 [system_monitor.py:probe():211] Finished collecting system info
+2023-08-14 23:31:55,988 INFO    HandlerThread:87947 [system_monitor.py:probe():214] Publishing system info
+2023-08-14 23:31:55,988 DEBUG   HandlerThread:87947 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-08-14 23:31:55,992 DEBUG   HandlerThread:87947 [system_info.py:_save_pip():67] Saving pip packages done
+2023-08-14 23:31:55,992 DEBUG   HandlerThread:87947 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-08-14 23:31:56,381 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/wandb-summary.json
+2023-08-14 23:31:56,381 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/conda-environment.yaml
+2023-08-14 23:31:56,381 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/requirements.txt
+2023-08-14 23:31:57,066 DEBUG   HandlerThread:87947 [system_info.py:_save_conda():86] Saving conda packages done
+2023-08-14 23:31:57,067 INFO    HandlerThread:87947 [system_monitor.py:probe():216] Finished publishing system info
+2023-08-14 23:31:57,068 DEBUG   SenderThread:87947 [sender.py:send():379] send: files
+2023-08-14 23:31:57,068 INFO    SenderThread:87947 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-08-14 23:31:57,086 DEBUG   SenderThread:87947 [sender.py:send():379] send: telemetry
+2023-08-14 23:31:57,086 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-14 23:31:57,087 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: stop_status
+2023-08-14 23:31:57,382 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/conda-environment.yaml
+2023-08-14 23:31:57,383 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/wandb-metadata.json
+2023-08-14 23:31:57,383 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/output.log
+2023-08-14 23:31:57,520 INFO    wandb-upload_0:87947 [upload_job.py:push():131] Uploaded file /var/folders/05/9pqpsgrd1mqg0713bd0x7w6r0000gn/T/tmp9h330qqrwandb/8ddmbr7x-wandb-metadata.json
+2023-08-14 23:31:57,568 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: pause
+2023-08-14 23:31:57,568 INFO    HandlerThread:87947 [handler.py:handle_request_pause():728] stopping system metrics thread or process
+2023-08-14 23:31:57,568 INFO    HandlerThread:87947 [system_monitor.py:finish():190] Stopping system monitor
+2023-08-14 23:31:57,569 DEBUG   SystemMonitor:87947 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-08-14 23:31:57,569 DEBUG   SystemMonitor:87947 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-08-14 23:31:57,569 DEBUG   SystemMonitor:87947 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-08-14 23:31:57,569 INFO    HandlerThread:87947 [interfaces.py:finish():202] Joined cpu monitor
+2023-08-14 23:31:57,569 INFO    HandlerThread:87947 [interfaces.py:finish():202] Joined disk monitor
+2023-08-14 23:31:57,569 INFO    HandlerThread:87947 [interfaces.py:finish():202] Joined memory monitor
+2023-08-14 23:31:57,569 INFO    HandlerThread:87947 [interfaces.py:finish():202] Joined network monitor
+2023-08-14 23:31:57,570 DEBUG   SenderThread:87947 [sender.py:send():379] send: stats
+2023-08-14 23:31:59,387 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/output.log
+2023-08-14 23:32:00,582 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:05,588 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:10,605 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:12,089 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-14 23:32:12,089 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: stop_status
+2023-08-14 23:32:16,303 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:21,319 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:26,340 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:26,475 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/config.yaml
+2023-08-14 23:32:27,089 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-14 23:32:27,089 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: stop_status
+2023-08-14 23:32:32,275 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:37,292 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:42,092 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-14 23:32:42,092 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: stop_status
+2023-08-14 23:32:43,045 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:48,056 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:53,075 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:32:57,092 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-14 23:32:57,093 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: stop_status
+2023-08-14 23:32:58,341 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:33:03,360 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:33:08,375 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:33:12,096 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-14 23:33:12,096 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: stop_status
+2023-08-14 23:33:14,086 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:33:19,100 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:33:19,965 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: resume
+2023-08-14 23:33:19,965 INFO    HandlerThread:87947 [handler.py:handle_request_resume():719] starting system metrics thread or process
+2023-08-14 23:33:19,965 INFO    HandlerThread:87947 [system_monitor.py:start():181] Starting system monitor
+2023-08-14 23:33:19,966 INFO    SystemMonitor:87947 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-08-14 23:33:19,966 INFO    SystemMonitor:87947 [interfaces.py:start():190] Started cpu monitoring
+2023-08-14 23:33:19,966 INFO    SystemMonitor:87947 [interfaces.py:start():190] Started disk monitoring
+2023-08-14 23:33:19,967 INFO    SystemMonitor:87947 [interfaces.py:start():190] Started memory monitoring
+2023-08-14 23:33:19,968 INFO    SystemMonitor:87947 [interfaces.py:start():190] Started network monitoring
+2023-08-14 23:33:19,975 DEBUG   SenderThread:87947 [sender.py:send():379] send: telemetry
+2023-08-14 23:33:19,977 DEBUG   SenderThread:87947 [sender.py:send():379] send: exit
+2023-08-14 23:33:19,977 INFO    SenderThread:87947 [sender.py:send_exit():584] handling exit code: 0
+2023-08-14 23:33:19,977 INFO    SenderThread:87947 [sender.py:send_exit():586] handling runtime: 1
+2023-08-14 23:33:19,978 INFO    SenderThread:87947 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-14 23:33:19,978 INFO    SenderThread:87947 [sender.py:send_exit():592] send defer
+2023-08-14 23:33:19,978 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:19,979 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 0
+2023-08-14 23:33:19,979 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:19,979 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-08-14 23:33:19,979 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 1
+2023-08-14 23:33:19,980 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:19,980 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 1
+2023-08-14 23:33:19,980 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:19,980 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-08-14 23:33:19,980 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 2
+2023-08-14 23:33:19,981 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:19,981 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 2
+2023-08-14 23:33:19,981 INFO    HandlerThread:87947 [system_monitor.py:finish():190] Stopping system monitor
+2023-08-14 23:33:19,982 INFO    HandlerThread:87947 [interfaces.py:finish():202] Joined cpu monitor
+2023-08-14 23:33:19,982 DEBUG   SystemMonitor:87947 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-08-14 23:33:19,982 DEBUG   SystemMonitor:87947 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-08-14 23:33:19,982 DEBUG   SystemMonitor:87947 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-08-14 23:33:19,982 INFO    HandlerThread:87947 [interfaces.py:finish():202] Joined disk monitor
+2023-08-14 23:33:19,982 INFO    HandlerThread:87947 [interfaces.py:finish():202] Joined memory monitor
+2023-08-14 23:33:19,983 INFO    HandlerThread:87947 [interfaces.py:finish():202] Joined network monitor
+2023-08-14 23:33:19,983 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:19,983 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-08-14 23:33:19,983 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 3
+2023-08-14 23:33:19,983 DEBUG   SenderThread:87947 [sender.py:send():379] send: stats
+2023-08-14 23:33:19,983 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:19,983 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 3
+2023-08-14 23:33:19,984 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:19,984 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-08-14 23:33:19,984 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 4
+2023-08-14 23:33:19,984 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:19,984 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 4
+2023-08-14 23:33:19,984 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:19,984 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-08-14 23:33:19,984 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 5
+2023-08-14 23:33:19,984 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:19,984 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 5
+2023-08-14 23:33:19,984 DEBUG   SenderThread:87947 [sender.py:send():379] send: summary
+2023-08-14 23:33:19,985 INFO    SenderThread:87947 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-14 23:33:19,985 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:19,985 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-08-14 23:33:19,985 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 6
+2023-08-14 23:33:19,986 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:19,986 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 6
+2023-08-14 23:33:19,986 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:19,986 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-08-14 23:33:19,988 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:33:20,656 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/wandb-summary.json
+2023-08-14 23:33:20,939 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 7
+2023-08-14 23:33:20,939 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:20,939 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 7
+2023-08-14 23:33:20,939 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:20,939 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-08-14 23:33:20,984 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: poll_exit
+2023-08-14 23:33:21,497 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 8
+2023-08-14 23:33:21,498 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: poll_exit
+2023-08-14 23:33:21,498 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:21,498 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 8
+2023-08-14 23:33:21,498 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:21,498 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-08-14 23:33:21,498 INFO    SenderThread:87947 [job_builder.py:build():281] Attempting to build job artifact
+2023-08-14 23:33:21,498 INFO    SenderThread:87947 [job_builder.py:build():297] run is notebook based run
+2023-08-14 23:33:21,499 INFO    SenderThread:87947 [job_builder.py:_get_source_type():400] is repo sourced job
+2023-08-14 23:33:21,499 INFO    SenderThread:87947 [job_builder.py:build():374] adding wandb-job metadata file
+2023-08-14 23:33:21,506 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 9
+2023-08-14 23:33:21,506 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:21,506 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 9
+2023-08-14 23:33:21,506 DEBUG   SenderThread:87947 [sender.py:send():379] send: artifact
+2023-08-14 23:33:21,659 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/config.yaml
+2023-08-14 23:33:21,660 INFO    Thread-39 :87947 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/output.log
+2023-08-14 23:33:21,985 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: poll_exit
+2023-08-14 23:33:26,079 INFO    SenderThread:87947 [sender.py:send_artifact():1475] sent artifact job-https___github.com_xin-cheng-ds_EHR_record.git_EHR_smote_version.ipynb - {'id': 'QXJ0aWZhY3Q6NTQxOTYzMDU1', 'digest': 'cbebd0afb640cb3d02cc90ef3e43250d', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_xin-cheng-ds_EHR_record.git_EHR_smote_version.ipynb', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_xin-cheng-ds_EHR_record.git_EHR_smote_version.ipynb', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjkwNTE1MTQz', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTQxOTk4NjA1', 'versionIndex': 1}}, 'version': 'v0'}
+2023-08-14 23:33:26,079 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:26,079 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:33:26,079 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-08-14 23:33:26,079 INFO    SenderThread:87947 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-08-14 23:33:26,673 INFO    SenderThread:87947 [dir_watcher.py:finish():388] scan: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files
+2023-08-14 23:33:26,673 INFO    SenderThread:87947 [dir_watcher.py:finish():402] scan save: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/requirements.txt requirements.txt
+2023-08-14 23:33:26,673 INFO    SenderThread:87947 [dir_watcher.py:finish():402] scan save: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/output.log output.log
+2023-08-14 23:33:26,674 INFO    SenderThread:87947 [dir_watcher.py:finish():402] scan save: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/config.yaml config.yaml
+2023-08-14 23:33:26,676 INFO    SenderThread:87947 [dir_watcher.py:finish():402] scan save: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/wandb-summary.json wandb-summary.json
+2023-08-14 23:33:26,678 INFO    SenderThread:87947 [dir_watcher.py:finish():402] scan save: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/conda-environment.yaml conda-environment.yaml
+2023-08-14 23:33:26,680 INFO    SenderThread:87947 [dir_watcher.py:finish():402] scan save: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/wandb-metadata.json wandb-metadata.json
+2023-08-14 23:33:26,680 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 10
+2023-08-14 23:33:26,681 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: poll_exit
+2023-08-14 23:33:26,681 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:26,682 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 10
+2023-08-14 23:33:26,683 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:26,683 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-08-14 23:33:26,683 INFO    SenderThread:87947 [file_pusher.py:finish():159] shutting down file pusher
+2023-08-14 23:33:26,990 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: keepalive
+2023-08-14 23:33:28,677 INFO    wandb-upload_1:87947 [upload_job.py:push():131] Uploaded file /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/output.log
+2023-08-14 23:33:29,579 INFO    wandb-upload_0:87947 [upload_job.py:push():131] Uploaded file /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/requirements.txt
+2023-08-14 23:33:29,600 INFO    wandb-upload_2:87947 [upload_job.py:push():131] Uploaded file /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/config.yaml
+2023-08-14 23:33:30,477 INFO    wandb-upload_4:87947 [upload_job.py:push():131] Uploaded file /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/conda-environment.yaml
+2023-08-14 23:33:30,483 INFO    wandb-upload_3:87947 [upload_job.py:push():131] Uploaded file /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/files/wandb-summary.json
+2023-08-14 23:33:30,688 INFO    Thread-38 (_thread_body):87947 [sender.py:transition_state():612] send defer: 11
+2023-08-14 23:33:30,688 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:30,688 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 11
+2023-08-14 23:33:30,688 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:30,688 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-08-14 23:33:30,688 INFO    SenderThread:87947 [file_pusher.py:join():164] waiting for file pusher
+2023-08-14 23:33:30,688 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 12
+2023-08-14 23:33:30,689 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:30,689 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 12
+2023-08-14 23:33:30,689 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:30,689 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-08-14 23:33:30,689 INFO    SenderThread:87947 [file_stream.py:finish():593] file stream finish called
+2023-08-14 23:33:31,820 INFO    SenderThread:87947 [file_stream.py:finish():597] file stream finish is done
+2023-08-14 23:33:31,820 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 13
+2023-08-14 23:33:31,820 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:31,820 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 13
+2023-08-14 23:33:31,820 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 23:33:31,820 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:31,820 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-08-14 23:33:31,820 INFO    SenderThread:87947 [sender.py:transition_state():612] send defer: 14
+2023-08-14 23:33:31,820 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 23:33:31,821 INFO    HandlerThread:87947 [handler.py:handle_request_defer():170] handle defer: 14
+2023-08-14 23:33:31,821 DEBUG   SenderThread:87947 [sender.py:send():379] send: final
+2023-08-14 23:33:31,821 DEBUG   SenderThread:87947 [sender.py:send():379] send: footer
+2023-08-14 23:33:31,821 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: defer
+2023-08-14 23:33:31,821 INFO    SenderThread:87947 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-08-14 23:33:31,821 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: poll_exit
+2023-08-14 23:33:31,822 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: server_info
+2023-08-14 23:33:31,822 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: get_summary
+2023-08-14 23:33:31,822 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: sampled_history
+2023-08-14 23:33:31,822 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: job_info
+2023-08-14 23:33:31,823 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: poll_exit
+2023-08-14 23:33:31,823 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: server_info
+2023-08-14 23:33:32,275 DEBUG   SenderThread:87947 [sender.py:send_request():406] send_request: job_info
+2023-08-14 23:33:32,276 DEBUG   HandlerThread:87947 [handler.py:handle_request():144] handle_request: shutdown
+2023-08-14 23:33:32,276 INFO    HandlerThread:87947 [handler.py:finish():857] shutting down handler
+2023-08-14 23:33:32,827 INFO    WriterThread:87947 [datastore.py:close():294] close: /Users/xincheng/Documents/GitHub/EHR record/wandb/run-20230814_233146-w2alflwc/run-w2alflwc.wandb
+2023-08-14 23:33:33,280 INFO    SenderThread:87947 [sender.py:finish():1552] shutting down sender
+2023-08-14 23:33:33,280 INFO    SenderThread:87947 [file_pusher.py:finish():159] shutting down file pusher
+2023-08-14 23:33:33,280 INFO    SenderThread:87947 [file_pusher.py:join():164] waiting for file pusher

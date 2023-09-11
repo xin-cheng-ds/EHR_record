@@ -1,0 +1,6 @@
+name: data2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+prefix: /Users/xincheng/miniconda3/envs/data2

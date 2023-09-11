@@ -1,0 +1,33 @@
+{
+    "os": "macOS-13.5.1-arm64-arm-64bit",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-08-28T18:39:50.240340",
+    "startedAt": "2023-08-28T18:39:43.022466",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "Documents/GitHub/EHR record/EHR.ipynb",
+    "root": "/Users/xincheng/Documents/GitHub/EHR record",
+    "git": {
+        "remote": "https://github.com/xin-cheng-ds/EHR_record.git",
+        "commit": "598d5b99ea8ca70ba7da92e1caf03e9e52e662a4"
+    },
+    "email": null,
+    "host": "Xins-MacBook-Air-2.local",
+    "username": "xincheng",
+    "executable": "/Users/xincheng/miniconda3/envs/data/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "total": 228.27386474609375,
+        "used": 83.77301788330078
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 8.0
+    }
+}
