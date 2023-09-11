@@ -150,7 +150,7 @@ jupyterlab-server==2.24.0
 jupyterlab==4.0.4
 keyring==23.13.1
 kiwisolver==1.4.4
-langchain==0.0.184
+langchain==0.0.236
 lazy-loader==0.2
 lazy-object-proxy==1.9.0
 limits==3.5.0
