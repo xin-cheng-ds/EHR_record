@@ -1,0 +1,494 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8a62e09a-b16a-47cf-bc2a-83a764a4f698",
+   "metadata": {
+    "id": "8a62e09a-b16a-47cf-bc2a-83a764a4f698",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import sklearn"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "TIehMrYcjCwX",
+   "metadata": {
+    "id": "TIehMrYcjCwX"
+   },
+   "outputs": [],
+   "source": [
+    "#for colab reading files\n",
+    "path = 'drive/My Drive/Projects/EHR_record/'\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "vRN8rZYGjsmp",
+   "metadata": {
+    "id": "vRN8rZYGjsmp",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "path=\"\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "160c1570-b05e-4bf8-a57c-f75d329e1ea3",
+   "metadata": {
+    "id": "160c1570-b05e-4bf8-a57c-f75d329e1ea3",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "demographic_train = pd.read_csv(path+'Train/demographics.csv')\n",
+    "labs_train = pd.read_csv(path+'Train/labs.csv')\n",
+    "vitals_train = pd.read_csv(path+'Train/vitals.csv')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "G_32CmBHi56R",
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "G_32CmBHi56R",
+    "outputId": "60a5ef76-9d56-4a9f-8fd0-bc46cd91a24e"
+   },
+   "outputs": [],
+   "source": [
+    "from google.colab import drive\n",
+    "drive.mount('/content/drive')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e0b1088e-b2aa-40e2-af67-14a4e419d25a",
+   "metadata": {
+    "id": "e0b1088e-b2aa-40e2-af67-14a4e419d25a",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "demographic_test = pd.read_csv(path+'Test/demographics.csv')\n",
+    "labs_test = pd.read_csv(path+'Test/labs.csv')\n",
+    "vitals_test = pd.read_csv(path+'Test/vitals.csv')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "116c470f-6f60-4181-bb78-caa467b4b29d",
+   "metadata": {
+    "id": "116c470f-6f60-4181-bb78-caa467b4b29d"
+   },
+   "source": [
+    "## 1. Exloratory analysis"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6f58f201-095b-4c86-9701-daa89deb8158",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def perform_eda(dataframes, names):\n",
+    "    for df, name in zip(dataframes, names):\n",
+    "        print(f\"EDA for {name}:\")\n",
+    "        print(df.describe())\n",
+    "        print(f\"Size of {name}:\", df.shape)\n",
+    "        print(f\"Null values in {name}:\\n\", df.isnull().sum())\n",
+    "        print(\"\\n\")\n",
+    "\n",
+    "# Usage:\n",
+    "dataframes = [demographic_train, labs_train, vitals_train]\n",
+    "names = [\"demographic\", \"labs\", \"vitals\"]\n",
+    "perform_eda(dataframes, names)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f810517f-29d5-4795-97aa-2008281561b9",
+   "metadata": {},
+   "source": [
+    "Check the linearality of predictors"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "78d0bbd7-b919-4acd-888a-78c04e4e875b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import seaborn as sns\n",
+    "import matplotlib.pyplot as plt\n",
+    "\n",
+    "# Compute the correlation matrix\n",
+    "corr = X_train.corr()\n",
+    "\n",
+    "# Generate a mask for the upper triangle\n",
+    "mask = np.triu(np.ones_like(corr, dtype=bool))\n",
+    "\n",
+    "# Set up the matplotlib figure\n",
+    "f, ax = plt.subplots(figsize=(11, 9))\n",
+    "\n",
+    "# Generate a custom diverging colormap\n",
+    "cmap = sns.diverging_palette(230, 20, as_cmap=True)\n",
+    "\n",
+    "# Draw the heatmap with the mask and correct aspect ratio\n",
+    "sns.heatmap(corr, mask=mask, cmap=cmap, vmax=.3, center=0,\n",
+    "            square=True, linewidths=.5, cbar_kws={\"shrink\": .5})\n",
+    "plt.savefig('correlation graph.png')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "866461eb-1a56-4ddc-b38c-50df88bc1329",
+   "metadata": {
+    "id": "866461eb-1a56-4ddc-b38c-50df88bc1329"
+   },
+   "source": [
+    "## 2. Data cleaning"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bdf86038-4d70-44a4-b857-9d6662b28001",
+   "metadata": {
+    "id": "bdf86038-4d70-44a4-b857-9d6662b28001"
+   },
+   "source": [
+    "2.1 Data merging"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fbb745a3-ec65-41ac-9650-9c78b4f6cbc0",
+   "metadata": {
+    "id": "fbb745a3-ec65-41ac-9650-9c78b4f6cbc0",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Define merge dataset function\n",
+    "def merge_datasets(df1, df2, df3, key):\n",
+    "\n",
+    "    merged_df = pd.merge(df1, df2, on=key, how='inner')\n",
+    "    merged_df = pd.merge(merged_df, df3, on=key, how='inner')\n",
+    "    return merged_df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "647c3936-7d2a-48aa-82f5-368d0d42059f",
+   "metadata": {
+    "id": "647c3936-7d2a-48aa-82f5-368d0d42059f",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "train = merge_datasets(demographic_train,vitals_train,labs_train,'patient_id')\n",
+    "test = merge_datasets(demographic_test,vitals_test,labs_test,'patient_id')\n",
+    "y_train = train['hospital_death']\n",
+    "X_train = train.drop('hospital_death', axis=1)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7131d588-c936-4c67-b4a9-9c27e63f3a5a",
+   "metadata": {
+    "id": "7131d588-c936-4c67-b4a9-9c27e63f3a5a"
+   },
+   "source": [
+    "2.2 Data cleaning"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "39cf26de-9dd9-4bc6-a24c-0d8cdeccfc83",
+   "metadata": {
+    "id": "39cf26de-9dd9-4bc6-a24c-0d8cdeccfc83",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "from sklearn.impute import SimpleImputer\n",
+    "from sklearn.pipeline import Pipeline, make_pipeline\n",
+    "from sklearn.compose import ColumnTransformer\n",
+    "from sklearn.preprocessing import StandardScaler\n",
+    "from sklearn.preprocessing import OneHotEncoder"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "40c7ae48-0c79-4558-9dc1-0586a28e0023",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def preprocess_numerical_features(X):\n",
+    "    \"\"\"Preprocess numerical features: Impute missing values and scale.\"\"\"\n",
+    "    transformer = Pipeline([\n",
+    "        (\"imputer\", SimpleImputer(strategy=\"mean\")),\n",
+    "        (\"scaler\", StandardScaler())\n",
+    "    ])\n",
+    "    return transformer.fit(X)\n",
+    "\n",
+    "def preprocess_categorical_features(X):\n",
+    "    \"\"\"Preprocess categorical features: Impute missing values and encode.\"\"\"\n",
+    "    transformer = Pipeline([\n",
+    "        (\"imputer\", SimpleImputer(strategy=\"most_frequent\")),\n",
+    "        (\"encoder\", OneHotEncoder())\n",
+    "    ])\n",
+    "    return transformer.fit(X)\n",
+    "\n",
+    "def preprocess_data(X_train):\n",
+    "    \"\"\"Main preprocessing function.\"\"\"\n",
+    "    # Handle numerical features\n",
+    "    numerical_features = X_train.select_dtypes(include=['int64', 'float64']).columns\n",
+    "    numerical_transformer = preprocess_numerical_features(X_train[numerical_features])\n",
+    "\n",
+    "    # Handle categorical features\n",
+    "    categorical_features = X_train.select_dtypes(include=['object']).columns\n",
+    "    categorical_transformer = preprocess_categorical_features(X_train[categorical_features])\n",
+    "\n",
+    "    # Combine transformers\n",
+    "    preprocessor = ColumnTransformer([\n",
+    "        (\"numerical\", numerical_transformer, numerical_features),\n",
+    "        (\"categorical\", categorical_transformer, categorical_features)\n",
+    "    ])\n",
+    "\n",
+    "    return preprocessor.fit(X_train)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b3855a8a-657e-4c18-8491-1e7ea3990054",
+   "metadata": {
+    "id": "b3855a8a-657e-4c18-8491-1e7ea3990054",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Usage:\n",
+    "\n",
+    "train_processed = preprocess_data(X_train)\n",
+    "Train_processed = train_processed.tranform(X_train)\n",
+    "Test_processed = train_processed.tranform(X_test)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "08cacae8-f3c9-45b8-9261-fc1c07e9255a",
+   "metadata": {
+    "id": "08cacae8-f3c9-45b8-9261-fc1c07e9255a"
+   },
+   "source": [
+    "3. Fit on models"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c8889158-178a-429f-8e53-e52d1a229bb5",
+   "metadata": {
+    "id": "c8889158-178a-429f-8e53-e52d1a229bb5",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#sampling data, straitify on the target column, also split group columns\n",
+    "from sklearn.model_selection import train_test_split\n",
+    "\n",
+    "class StratifiedGroupSampler:\n",
+    "    def __init__(self, df, target_col, group_col, fraction, random_state=42):\n",
+    "        self.df = df\n",
+    "        self.target_col = target_col\n",
+    "        self.group_col = group_col\n",
+    "        self.fraction = fraction\n",
+    "        self.random_state = random_state\n",
+    "\n",
+    "    def sample(self):\n",
+    "        sampled_df = pd.DataFrame()\n",
+    "\n",
+    "        for target in self.df[self.target_col].unique():\n",
+    "            group_ids = self.df[self.df[self.target_col] == target][self.group_col].unique()\n",
+    "            _, sampled_ids = train_test_split(group_ids, test_size=self.fraction, random_state=self.random_state)\n",
+    "\n",
+    "            sampled_data = self.df[self.df[self.group_col].isin(sampled_ids)]\n",
+    "            sampled_df = pd.concat([sampled_df, sampled_data])\n",
+    "\n",
+    "        return sampled_df\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7411a14d-7473-4dad-9b4c-ed6237610a04",
+   "metadata": {
+    "id": "7411a14d-7473-4dad-9b4c-ed6237610a04",
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "def sample_data(df, fraction):\n",
+    "\n",
+    "    sampler = StratifiedGroupSampler(df, 'hospital_death', 'patient_id', fraction)\n",
+    "    sampled_train = sampler.sample()\n",
+    "    X_sampled = sampled_train.drop('hospital_death', axis = 1)\n",
+    "    y_sampled = sampled_train['hospital_death']\n",
+    "\n",
+    "\n",
+    "    return X_sampled, y_sampled"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b5b36cdb-54c8-4ed3-b482-9459f30125ff",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import wandb\n",
+    "from sklearn.ensemble import RandomForestClassifier\n",
+    "from sklearn.ensemble import GradientBoostingClassifier\n",
+    "from sklearn.feature_selection import RFECV\n",
+    "from sklearn.linear_model import LogisticRegression\n",
+    "from sklearn.model_selection import cross_val_score, cross_validate\n",
+    "from sklearn.metrics import classification_report\n",
+    "\n",
+    "def sample_and_validate(pipeline, train_data, fraction):\n",
+    "    # Sample and process the data\n",
+    "    X_sampled, y_sampled = sample_data(train_data, fraction)\n",
+    "    X_processed_sample = preprocessor.fit_transform(X_sampled)\n",
+    "\n",
+    "    # Define scoring dictionary\n",
+    "    scoring = {\n",
+    "        'precision': 'precision',\n",
+    "        'recall': 'recall',\n",
+    "        'f1_score': 'f1'\n",
+    "    }\n",
+    "\n",
+    "    # Calculate cross-validation scores\n",
+    "    cv_scores = cross_validate(pipeline, X_processed_sample, y_sampled, cv=5, scoring=scoring)\n",
+    "\n",
+    "    return cv_scores\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1ffebbf1-89b5-47f0-9da2-bfcb980fc12a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def train_and_evaluate(pipelines, fractions, train_data):\n",
+    "    # Initialize W&B\n",
+    "    wandb.init(project=\"EHR_record\")\n",
+    "    \n",
+    "    # Loop over the pipelines and fractions\n",
+    "    for pipeline_dict in pipelines:\n",
+    "        for fraction in fractions:\n",
+    "            print(f\"Training {pipeline_dict['name']} with fraction {fraction}\")\n",
+    "            X_sampled, y_sampled = sample_data(train_data, fraction)\n",
+    "            X_processed_sample = preprocessor.fit_transform(X_sampled)\n",
+    "            X_train, X_test, y_train, y_test = train_test_split(X_processed_sample, y_sampled, test_size=0.2)\n",
+    "    \n",
+    "            pipeline = pipeline_dict['pipeline']\n",
+    "            pipeline.fit(X_train, y_train)\n",
+    "            y_pred = pipeline.predict(X_test)\n",
+    "            cv_scores = sample_and_validate(pipeline, train, fraction)\n",
+    "    \n",
+    "            # Compute and plot the confusion matrix\n",
+    "            cm = confusion_matrix(y_test, y_pred)\n",
+    "            plt.figure(figsize=(10,7))\n",
+    "            sns.heatmap(cm, annot=True, cmap='Blues')\n",
+    "            plt.xlabel('Predicted')\n",
+    "            plt.ylabel('Actual')\n",
+    "            plt.title(f\"Confusion Matrix for {pipeline_dict['name']} with fraction {fraction}\")\n",
+    "    \n",
+    "            # Log the plot to W&B\n",
+    "            wandb.log({\n",
+    "                \"confusion_matrix\": wandb.Image(plt),\n",
+    "                \"precision\": cv_scores['test_precision'].mean(),\n",
+    "                \"recall\": cv_scores['test_recall'].mean(),\n",
+    "                \"f1_score\": cv_scores['test_f1_score'].mean(),\n",
+    "                \"fraction\": fraction,\n",
+    "                \"model_name\": pipeline_dict['name'],\n",
+    "                **pipeline_dict['params']\n",
+    "            })\n",
+    "            plt.close()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "89d0e66a-843b-4fc1-88c0-e03e516ecb41",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Define the pipelines to try\n",
+    "pipelines = [\n",
+    "    {\"name\": \"Logistic Regression\", \"pipeline\": Pipeline([('classifier', LogisticRegression(max_iter=1000, class_weight='balanced'))]), \"params\": {'max_iter': 1000}},\n",
+    "    {\"name\": \"Random Forest\", \"pipeline\": Pipeline([('classifier', RandomForestClassifier())]), \"params\": {}},\n",
+    "    {\"name\": \"Gradient Boost\", \"pipeline\": Pipeline([('classifier', GradientBoostingClassifier())]), \"params\": {}},\n",
+    "]\n",
+    "\n",
+    "# Define the fractions to try\n",
+    "fractions = [0.1, 0.2, 0.3]\n",
+    "#Train and evaluate model\n",
+    "train_and_evaluate(pipelines, fractions, train)\n",
+    "\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "colab": {
+   "machine_shape": "hm",
+   "provenance": []
+  },
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.3"
+  },
+  "toc-autonumbering": true
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
